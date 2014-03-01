@@ -11,6 +11,9 @@ RUN /build/runit/install.sh
 ADD build/sshd /build/sshd
 RUN /build/sshd/install.sh
 
+ADD build/rsyslogd /build/rsyslogd
+RUN /build/rsyslogd/install.sh
+
 #RUN /build/clean.sh
 
 CMD runsvdir -P /etc/service
