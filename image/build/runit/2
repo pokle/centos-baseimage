@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo Running services in /etc/service
+runsvdir -P /etc/service

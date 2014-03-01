@@ -16,4 +16,4 @@ RUN /build/rsyslogd/install.sh
 
 #RUN /build/clean.sh
 
-CMD runsvdir -P /etc/service
+CMD runit
