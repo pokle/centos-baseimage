@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+cd $(dirname $0)
+
 host=$1
 
 if [ -z "$host" ]; then
@@ -6,5 +8,4 @@ if [ -z "$host" ]; then
   exit 1
 fi
 
-cd $(dirname $0)
-ssh -i build/sshd/insecure-key root@$host
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i build/sshd/insecure-key root@$host
