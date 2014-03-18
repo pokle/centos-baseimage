@@ -8,4 +8,5 @@ if [ -z "$host" ]; then
   exit 1
 fi
 
+chmod og= build/sshd/insecure-key
 ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i build/sshd/insecure-key root@$host
