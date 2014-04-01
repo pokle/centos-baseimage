@@ -1,0 +1,5 @@
+NAME="centos-baseimage"
+BUILD_DIR="./image"
+IMAGE="$NAME:latest"
+CONTAINER="$USER-$NAME"
+TUNNEL_PORT=12000
